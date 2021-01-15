@@ -48,7 +48,7 @@ function ProductPage(props) {
       </div>
       <Container>
         <div className="product-page-container d-flex align-items-start justify-content-center mt-5 pt-5">
-          <div className="product-page-imagewrap" style={{ backgroundColor: "#000" }}>
+          <div className="product-page-imagewrap">
             <div className="product-page-image" style={{ background: `url("${productData.image}")` }}></div>
           </div>
           <div className="product-page-content">
