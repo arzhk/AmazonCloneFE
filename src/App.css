@@ -1,0 +1,391 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #eaeded;
+}
+
+#navbar-main {
+  background-color: #131921;
+}
+
+#navbar-main a {
+  color: #fff;
+  border: 1px solid transparent;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+#navbar-main a:hover {
+  text-decoration: none;
+  border: 1px solid #fff;
+}
+
+#navbar-main .badge-amazon {
+  color: #131921;
+  background-color: #ff9900;
+  font-size: 0.8rem;
+}
+
+#navbar-main input {
+  border: none;
+  box-shadow: none;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+}
+
+#navbar-main .search-pre {
+  border: none;
+}
+
+#navbar-main .search-post {
+  border: none;
+  background-color: #febd69;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+  cursor: pointer;
+}
+
+#navbar-main .search-post:hover {
+  background-color: rgb(243, 168, 71);
+}
+
+#navbar-main .search-post:active {
+  transform: scale(1.1);
+}
+
+#navbar-main .dropdown-link {
+  font-size: 0.8rem;
+}
+
+.jumbotron {
+  height: 500px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 8% !important;
+}
+
+.jumbotron h1,
+.jumbotron h4,
+.jumbotron button {
+  z-index: 5;
+  position: relative;
+  font-weight: bold;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.25);
+}
+
+.jumbotron:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 62%, rgba(255, 255, 255, 1) 100%);
+}
+
+.jumbotron:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background: url("https://wallpapercave.com/wp/wp3349158.jpg");
+  background-size: cover;
+  background-position: center 100%;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+}
+
+.jumbotron button {
+  background-color: #febd69;
+  transition: background-color 0.15s ease;
+}
+
+.jumbotron button:hover {
+  background-color: rgb(243, 168, 71);
+}
+
+#products-main-container {
+  width: 100%;
+  position: relative;
+  margin-top: -120px;
+  z-index: 5;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1370px !important;
+}
+
+.container-smaller {
+  max-width: 1200px !important;
+}
+
+.product-card {
+  border: none !important;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 0.4rem !important;
+  border-bottom: 4px solid #ffc368 !important;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+.product-card .fa-star {
+  margin-right: 2px;
+  color: #ffc368;
+  text-shadow: 0px 0px 1px #e27c22, 0px 0px 1px #e27c22, 0px 0px 1px #e27c22, 0px 0px 1px #e27c22, 0px 0px 1px #e27c22,
+    0px 0px 1px #e27c22, 0px 0px 1px #e27c22, 0px 0px 1px #e27c22;
+}
+
+.product-card .item-name {
+  color: rgb(0, 113, 133);
+  cursor: pointer;
+}
+
+.product-card:hover .item-name {
+  color: rgb(199, 81, 31);
+}
+
+.product-card .price {
+  color: #b12704;
+  cursor: pointer;
+}
+
+.product-card .img-wrap {
+  width: 170px;
+  height: 170px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.product-card .img-img {
+  width: 100%;
+  height: 100%;
+  background-size: contain !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+.product-page-container {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.product-page-imagewrap {
+  width: 170px;
+  height: 170px;
+  margin-right: 3rem;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.product-page-image {
+  width: 100%;
+  height: 100%;
+  background-size: contain !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+.product-page-container .price {
+  color: #b12704;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.product-page-container button {
+  background-color: #febd69;
+  transition: background-color 0.15s ease;
+  border: none;
+}
+
+.product-page-container button:hover {
+  background-color: rgb(243, 168, 71);
+}
+
+.btn-upload {
+  background-color: #97fd78;
+  transition: background-color 0.15s ease;
+  font-size: 0.8rem;
+  padding: 4px 14px;
+  border: none;
+}
+
+.btn-upload:hover {
+  background-color: rgb(126, 216, 67);
+}
+
+.btn-delete {
+  background-color: #f34e4e;
+  transition: background-color 0.15s ease;
+  font-size: 0.8rem;
+  padding: 4px 14px;
+  border: none;
+  color: #fff;
+}
+
+.btn-delete:hover {
+  background-color: rgb(204, 59, 59);
+}
+
+.btn-edit {
+  background-color: #febd69;
+  transition: background-color 0.15s ease;
+  font-size: 0.8rem;
+  padding: 4px 14px;
+  border: none;
+}
+
+.btn-edit:hover {
+  background-color: rgb(243, 168, 71);
+}
+
+.admin-panel {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 20px;
+  background-color: rgb(243, 243, 243);
+}
+
+.admin-panel input {
+  padding: 8px;
+  margin: 8px 0px;
+  border: none;
+  border-top: 1px solid #13192117;
+  border-left: 1px solid #13192117;
+  border-right: 1px solid #13192117;
+  border-bottom: 1px solid #1319212a;
+  border-radius: 2px;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.04);
+}
+
+.admin-panel input:focus {
+  outline: none;
+}
+
+.edit-product-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.edit-product-modal-container {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 20px;
+  background-color: rgb(243, 243, 243);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.05);
+  width: 400px;
+}
+
+.edit-product-modal-container input {
+  padding: 8px;
+  margin: 8px 0px;
+  border: none;
+  border-top: 1px solid #13192117;
+  border-left: 1px solid #13192117;
+  border-right: 1px solid #13192117;
+  border-bottom: 1px solid #1319212a;
+  border-radius: 2px;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.04);
+}
+
+.edit-product-modal-container input:focus {
+  outline: none;
+}
+
+.image-upload-container {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-upload-container-content {
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  background-color: rgb(243, 243, 243);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+  width: 400px;
+
+  position: relative;
+  z-index: 6;
+}
+
+.swing-in-top-fwd {
+  -webkit-animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2020-12-14 15:15:10
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info.
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation swing-in-top-fwd
+ * ----------------------------------------
+ */
+@-webkit-keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+    transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    opacity: 1;
+  }
+}
+@keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+    transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    opacity: 1;
+  }
+}
