@@ -7,6 +7,8 @@ import Jumbo from "./components/Jumbo";
 import Products from "./components/Products";
 import ProductPage from "./components/ProductPage";
 import AdminPage from "./components/AdminPage";
+import CartPage from "./components/CartPage";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <Route path="/" exact component={Products} />
       <Route path="/product/:id" exact component={ProductPage} />
       <Route path="/admin" exact component={AdminPage} />
+      <Route path="/cart" exact component={CartPage} />
+      <Route path="/" component={Footer} />
     </Router>
   );
 }

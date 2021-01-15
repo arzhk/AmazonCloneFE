@@ -1,7 +1,8 @@
 import React from "react";
-import { Container, Button } from "react-bootstrap";
+import { Container, Button, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import env from "react-dotenv";
+import Review from "./Review";
 
 function ProductPage(props) {
   const productID = props.match.params.id;
@@ -36,7 +37,7 @@ function ProductPage(props) {
 
   return (
     <>
-      <div id="product-page-subnav">
+      <div id="product-page-subnav" style={{ backgroundColor: "#fff" }}>
         <ul>
           {links.map((link) => (
             <li>
@@ -127,7 +128,6 @@ function ProductPage(props) {
                 </Link>
               </div>
             </div>
-
             <div className="content-buttons">
               <Button
                 variant="warning"
@@ -152,6 +152,17 @@ function ProductPage(props) {
             </div>
           </div>
         </div>
+        <Row>
+          <Col xs={{ span: 6, offset: 3 }} className="mt-5">
+            <div id="product-reviews-container">
+              <h5 className="mb-4">Top reviews</h5>
+
+              <Review />
+              <Review />
+              <Review />
+            </div>
+          </Col>
+        </Row>
       </Container>
     </>
   );

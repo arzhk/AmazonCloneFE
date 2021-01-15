@@ -81,7 +81,7 @@ function NavBar() {
                     <p className="mb-0 font-weight-bold ">& Orders</p>
                   </div>
                 </Nav.Link>
-                <Button className="cart-button mr-3">
+                <Link to="/cart" className="px-2">
                   <div className="dropdown-link">
                     <i className="fas fa-shopping-cart mr-1"></i>
                     <p className="mb-0 d-inline-block font-weight-bold mr-2" style={{ color: "#ff9900" }}>
@@ -89,7 +89,7 @@ function NavBar() {
                     </p>
                     <p className="mb-0 font-weight-bold">Basket</p>
                   </div>
-                </Button>
+                </Link>
               </div>
             </Nav>
           </Navbar.Collapse>
