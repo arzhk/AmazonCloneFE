@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Spinner } from "react-bootstrap";
+import env from "react-dotenv";
 
 function EditProduct(props) {
   const [productInfo, setProductInfo] = React.useState(props.editProductInfo);
@@ -7,8 +8,9 @@ function EditProduct(props) {
 
   const postDataHandler = async () => {
     setIsLoading(true);
+    console.log(productInfo);
     try {
-      const response = await fetch(`${process.env.API_URL}${productInfo.productID}`, {
+      const response = await fetch(`${env.API_URL}${productInfo._id}`, {
         method: "PUT",
         body: JSON.stringify(productInfo),
         headers: {

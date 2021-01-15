@@ -156,7 +156,6 @@ function ProductPage(props) {
           <Col xs={{ span: 6, offset: 3 }} className="mt-5">
             <div id="product-reviews-container">
               <h5 className="mb-4">Top reviews</h5>
-
               <Review />
               <Review />
               <Review />

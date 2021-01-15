@@ -12,6 +12,7 @@ function AdminPage() {
   const [showEditModal, setShowEditModal] = useState(false);
   const [editProductInfo, setEditProductInfo] = useState({});
   const [showImageUpload, setShowImageUpload] = React.useState(false);
+  const [uploadImage, setUploadImage] = useState({});
 
   const fetchAllProductsHandler = async () => {
     try {
@@ -20,6 +21,22 @@ function AdminPage() {
       setAllProducts(data);
     } catch (error) {
       console.log(error);
+    }
+  };
+
+  const uploadImageHandler = async () => {
+    console.log(uploadImage);
+    let formData = new FormData();
+    let blob = new Blob([uploadImage[0]], { type: "image/jpeg" });
+    formData.append("image", blob);
+    try {
+      const response = await fetch(`${env.API_URL}${editProductInfo._id}/image/upload`, {
+        method: "POST",
+        body: formData,
+      });
+      setShowImageUpload(false);
+    } catch (err) {
+      console.log(err);
     }
   };
 
@@ -37,6 +54,10 @@ function AdminPage() {
 
   const showImageUploaderHandler = () => {
     setShowImageUpload(!showImageUpload);
+  };
+
+  const imageUploadHandler = (picture) => {
+    setUploadImage(picture);
   };
 
   useEffect(() => {
@@ -59,12 +80,14 @@ function AdminPage() {
                     buttonText="Choose images"
                     imgExtension={[".jpg", ".gif", ".png", ".gif"]}
                     maxFileSize={5242880}
+                    withPreview={true}
+                    onChange={imageUploadHandler}
                   />
                   <div>
                     <Button variant="secondary" className="mr-2 rounded-pill" onClick={showImageUploaderHandler}>
                       Cancel
                     </Button>
-                    <Button variant="success" className="rounded-pill">
+                    <Button variant="success" className="rounded-pill" onClick={uploadImageHandler}>
                       Submit
                     </Button>
                   </div>
