@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
+import env from "react-dotenv";
 import ProductCard from "./ProductCard";
 
 function Products() {
@@ -7,12 +8,7 @@ function Products() {
 
   const fetchAllProductsHandler = async () => {
     try {
-      const response = await fetch("http://localhost:3001/products/", {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-
+      const response = await fetch(`${env.API_URL}`);
       const data = await response.json();
       setAllProducts(data);
     } catch (e) {

@@ -8,7 +8,7 @@ function EditProduct(props) {
   const postDataHandler = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch(`http://localhost:3001/products/${productInfo._id}`, {
+      const response = await fetch(`${process.env.API_URL}${productInfo.productID}`, {
         method: "PUT",
         body: JSON.stringify(productInfo),
         headers: {

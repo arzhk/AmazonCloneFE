@@ -1,4 +1,5 @@
 import React from "react";
+import env from "react-dotenv";
 
 function ProductTableItem(props) {
   const productID = props.product._id;
@@ -7,7 +8,7 @@ function ProductTableItem(props) {
   const deleteProductHandler = async () => {
     props.tableLoadingHandler(true);
     try {
-      await fetch(`http://localhost:3001/products/${productID}`, {
+      await fetch(`${env.API_URL}${productID}`, {
         method: "DELETE",
       });
 

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { Table, Container, Col, Spinner, Button } from "react-bootstrap";
+import env from "react-dotenv";
 import AddProduct from "./AddProduct";
 import EditProduct from "./EditProduct";
-import { Table, Container, Col, Spinner, Button } from "react-bootstrap";
 import ProductTableItem from "./ProductTableItem";
 import ImageUploader from "react-images-upload";
 
@@ -14,7 +15,7 @@ function AdminPage() {
 
   const fetchAllProductsHandler = async () => {
     try {
-      const response = await fetch("http://localhost:3001/products");
+      const response = await fetch(`${env.API_URL}`);
       const data = await response.json();
       setAllProducts(data);
     } catch (error) {

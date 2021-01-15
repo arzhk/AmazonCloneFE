@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Button, Spinner } from "react-bootstrap";
+import env from "react-dotenv";
 import ErrorAlert from "./ErrorAlert";
 
 function AddProduct(props) {
@@ -17,7 +18,7 @@ function AddProduct(props) {
   const postDataHandler = async () => {
     setIsLoading(true);
     try {
-      let response = await fetch(`http://localhost:3001/products`, {
+      let response = await fetch(`${env.API_URL}`, {
         method: "POST",
         body: JSON.stringify(inputData),
         headers: {
