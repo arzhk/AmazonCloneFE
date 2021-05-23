@@ -52,23 +52,16 @@ function Footer() {
           </Row>
         </Container>
       </div>
-      <Container>
-        <Row>
-          <Col xs={12} className="px-0">
-            <div className="footer-bottom d-flex justify-content-center align-items-center">
-              <ul>
-                {footerLinks[4].map((link) => (
-                  <li>
-                    <Link>{link}</Link>
-                  </li>
-                ))}
-              </ul>
-              <small className="copyright-txt">© 1996-2020, Amazon.com, Inc. or its affiliates</small>
-            </div>
-          </Col>
-        </Row>
-      </Container>
-      <div></div>
+      <div className="footer-bottom d-flex justify-content-center align-items-center w-100">
+        <ul>
+          {footerLinks[4].map((link) => (
+            <li>
+              <Link>{link}</Link>
+            </li>
+          ))}
+        </ul>
+        <small className="copyright-txt">© 1996-2020, Amazon.com, Inc. or its affiliates</small>
+      </div>
     </footer>
   );
 }
